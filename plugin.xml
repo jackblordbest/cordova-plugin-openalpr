@@ -13,20 +13,20 @@
     </author>
 
     <js-module name="OpenALPR" src="www/OpenALPR.js">
-        <clobbers target="cordova.plugins.OpenALPR"/>
+        <clobbers target="OpenALPR"/>
     </js-module>
 
     <!-- Android -->
     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
+        <config-file target="config.xml" parent="/*">
             <feature name="OpenALPR">
-                <param name="android-package" value="org.apache.cordova.openalpr.OpenALPR"/>
+                <param name="android-package" value="com.OpenALPR"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/OpenALPR.java" target-dir="src/org/apache/cordova/openalpr"/>
-        <source-file src="src/android/lib/jni" target-dir="src/com/openalpr"/>
-        <source-file src="src/android/lib/util" target-dir="src/com/openalpr"/>
+        <source-file src="src/android/OpenALPR.java" target-dir="java/com/openalpr"/>
+        <source-file src="src/android/lib/jni" target-dir="java/com/openalpr"/>
+        <source-file src="src/android/lib/util" target-dir="java/com/openalpr"/>
         <source-file src="src/android/lib/armeabi-v7a" target-dir="libs"/>
         <source-file src="src/android/assets/runtime_data" target-dir="assets"/>
         <source-file src="src/openalpr.conf" target-dir="assets/runtime_data"/>
